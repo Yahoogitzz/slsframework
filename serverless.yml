@@ -3,11 +3,13 @@ org: yahooslsfw
 service: slsframework
 # service: dynamodb-crud-api
 
+frameworkVersion: "3"
+
 provider:
   name: aws
   runtime: nodejs18.x
   stage: ${opt:stage, 'dev'}
-  region: us-east-1
+  region: us-west-1
   stages:
   prod:
     observability: true # turn on observability in the "prod" Stage.
