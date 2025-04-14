@@ -29,6 +29,13 @@ provider:
 # you can overwrite defaults here
 #  stage: dev
 #  region: us-east-1
+stages:
+  prod:
+    observability: true # turn on observability in the "prod" Stage.
+  dev:
+    observability: true # turn on observability in the "dev" Stage.
+  default:
+    observability: false # turn off observability for all other Stages.
 
 # you can add statements to the Lambda function's IAM Role here
 #  iam:
