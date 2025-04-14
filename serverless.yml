@@ -21,6 +21,9 @@ provider:
     DYNAMODB_TABLE_NAME: ${self:custom.postsTableName}
     STRIPE_API_KEY: ${param:STRIPE_API_KEY}
 
+monitoring:
+  enabled: true # Enables monitoring on Serverless Dashboard
+
 custom:
   postsTableName: posts-table-${self:provider.stage}
 
