@@ -1,4 +1,4 @@
-name: Deploy DynamoDB CRUD API
+name: Deploy slsframework
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the main branch
@@ -42,7 +42,8 @@ jobs:
 
     - name: serverless deploy
       # uses: serverless/github-action@master
-      uses: serverless/github-action@main
+      # uses: serverless/github-action@main
+      uses: serverless/github-action@v3.1
       with:
         args: deploy
       env:
