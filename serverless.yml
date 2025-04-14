@@ -1,12 +1,23 @@
-service: dynamodb-crud-api
+app: dev
+org: yahooslsfw
+service: slsframework
+# service: dynamodb-crud-api
 
 provider:
   name: aws
   runtime: nodejs18.x
   stage: ${opt:stage, 'dev'}
   region: us-east-1
+  stages:
+  prod:
+    observability: true # turn on observability in the "prod" Stage.
+  dev:
+    observability: true # turn on observability in the "dev" Stage.
+  default:
+    observability: false # turn off observability for all other Stages.
   environment:
     DYNAMODB_TABLE_NAME: ${self:custom.postsTableName}
+    STRIPE_API_KEY: ${param:STRIPE_API_KEY}
 
 custom:
   postsTableName: posts-table-${self:provider.stage}
