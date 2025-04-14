@@ -1,5 +1,5 @@
 org: yahooslsfw
-app: dev
+app: sls-crud-app
 service: slsframework
 # service: dynamodb-crud-api
 
