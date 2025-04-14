@@ -19,7 +19,7 @@ provider:
   #   observability: false # turn off observability for all other Stages.
   environment:
     DYNAMODB_TABLE_NAME: ${self:custom.postsTableName}
-    STRIPE_API_KEY: ${param:STRIPE_API_KEY}
+    STRIPE_API_KEY: ${env:STRIPE_API_KEY}
 
 custom:
   postsTableName: posts-table-${self:provider.stage}
