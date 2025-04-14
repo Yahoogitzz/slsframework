@@ -3,7 +3,7 @@ app: dev
 service: slsframework
 # service: dynamodb-crud-api
 
-# frameworkVersion: "3"
+frameworkVersion: "3"
 
 provider:
   name: aws
