@@ -5,7 +5,7 @@ const {
   DeleteItemCommand,
   ScanCommand,
   UpdateItemCommand,
-  BatchWriteItemCommand, // ✅ Added for bulk insert
+  BatchWriteItemCommand, //  Added for bulk insert
 } = require("@aws-sdk/client-dynamodb");
 const { marshall, unmarshall } = require("@aws-sdk/util-dynamodb");
 
@@ -30,7 +30,7 @@ const safeParse = (input) => {
   }
 };
 
-// ✅ GET a single post by postId
+//  GET a single post by postId
 const getPost = async (event) => {
   const postId = event?.pathParameters?.postId;
 
@@ -54,7 +54,7 @@ const getPost = async (event) => {
   }
 };
 
-// ✅ CREATE a new post
+// CREATE a new post
 const createPost = async (event) => {
   const body = safeParse(event.body);
   if (!body || !body.postId) {
@@ -74,7 +74,7 @@ const createPost = async (event) => {
   }
 };
 
-// ✅ CREATE MULTIPLE posts at once
+//  CREATE MULTIPLE posts at once
 const createMultiplePosts = async (event) => {
   const posts = safeParse(event.body);
 
@@ -108,7 +108,7 @@ const createMultiplePosts = async (event) => {
   }
 };
 
-// ✅ UPDATE a post by ID
+//  UPDATE a post by ID
 const updatePost = async (event) => {
   const postId = event?.pathParameters?.postId;
   const body = safeParse(event.body);
@@ -140,7 +140,7 @@ const updatePost = async (event) => {
   }
 };
 
-// ✅ DELETE a post
+//  DELETE a post
 const deletePost = async (event) => {
   const postId = event?.pathParameters?.postId;
   if (!postId) return formatResponse(400, "Missing postId.");
@@ -158,7 +158,7 @@ const deletePost = async (event) => {
   }
 };
 
-// ✅ GET all posts
+//  GET all posts
 const getAllPosts = async () => {
   try {
     const { Items } = await db.send(
@@ -175,7 +175,7 @@ const getAllPosts = async () => {
 module.exports = {
   getPost,
   createPost,
-  createMultiplePosts, // ✅ Newly added function
+  createMultiplePosts, //  Newly added function
   updatePost,
   deletePost,
   getAllPosts,
