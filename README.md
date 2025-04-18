@@ -34,3 +34,6 @@ SLS CRUD Project Overview 🚀:--	https://www.loom.com/share/5bfcf32cede1484e848
 
 Project Architecture:--
 https://www.loom.com/share/0e9ba97cf17543d88522e49ef15a90a3?sid=e97e8954-22b7-4ff9-af85-2ca433b7b7d7
+
+Project link share info:--
+https://www.loom.com/share/5fcdb59905cb49f793826dc458553c41?sid=9491c26f-b489-4636-a983-818c8562a2b8
